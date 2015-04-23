@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CDiophantine.cs">
+    <Files>
+      <File FileName="Assets\CDiophantine.cs" Line="164" Column="5" />
+      <File FileName="Assets\main.cs" Line="11" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\main.cs" line="11" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="207" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="217" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="115" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="135" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="170" />
+      <Breakpoint file="C:\Users\Admin\Documents\Магистратура\Интеллектуальные системы\Genetic Algorithm\Assets\CDiophantine.cs" line="215" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
