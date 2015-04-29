@@ -5,20 +5,26 @@ public class main : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		CDiophantine dp = new CDiophantine(1, 2, 3, 4, 30);
+		CDiofant dp = new CDiofant(1, 2, 3, 4, 30);
 		
 		int ans = 0;
+		float time = Time.time;
 		ans = dp.Solve();
 		if (ans == -1) {
 			print("No solution found.");
 		} else {
-			gene gn = dp.GetGene(ans);
+			chromosome gn = dp.GetGene(ans);
 			
-			print("The solution set to a + 2b + 3c + 4d = 30 is:");
-			print("a = " + gn.alleles[0]);
-			print("b = " + gn.alleles[1]);
-			print("c = " + gn.alleles[2]);
-			print("d = " + gn.alleles[3]);
+			//print("The solution set to a + 2b + 3c + 4d = 30 is:");
+			//print("a = " + gn.genes[0]);
+			//print("b = " + gn.genes[1]);
+			//print("c = " + gn.genes[2]);
+			//print("d = " + gn.genes[3]);
+			//print ("Population number: " + dp.MAXPOP);
+			print ("Problem solved in " + dp.generationsNumber + " generations.");
+			time = Time.time - time;
+			print ("Time spent: " + Time.realtimeSinceStartup + ", s");
+			
 		}
 	}
 	

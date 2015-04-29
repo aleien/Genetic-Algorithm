@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public struct gene {
+public struct cgene {
 	
 	public int[] alleles;		
 	public int fitness;		
@@ -11,14 +11,14 @@ public struct gene {
 	
 	// Test for equality.
 	
-	public static bool operator ==(gene gone, gene gtwo) {			
+	public static bool operator ==(cgene gone, cgene gtwo) {			
 		for (int i = 0; i < 4; i++) {				
 			if (gone.alleles[i] != gtwo.alleles[i]) return false;				
 		}			
 		return true;			
 	}
 	
-	public static bool operator !=(gene gone, gene gtwo) {			
+	public static bool operator !=(cgene gone, cgene gtwo) {			
 		for (int i = 0; i < 4; i++) {				
 			if (gone.alleles[i] != gtwo.alleles[i]) return true;				
 		}			
@@ -27,16 +27,16 @@ public struct gene {
 	
 }
 
-public class CDiophantine : MonoBehaviour	{
+public class Diophantine : MonoBehaviour	{
 	public const int MAXPOP = 5;
 	
 	int ca, cb, cc, cd;		
 	int result;		
-	gene[] population;
+	cgene[] population;
 	float generalFitness;
 	System.Random rand;
 	
-	public CDiophantine (int a, int b, int c, int d, int res)
+	public Diophantine (int a, int b, int c, int d, int res)
 	{
 		ca = a;
 		cb = b;
@@ -44,7 +44,7 @@ public class CDiophantine : MonoBehaviour	{
 		cd = d;
 		result = res;	
 		generalFitness = 0;
-		population = new gene[MAXPOP];
+		population = new cgene[MAXPOP];
 		for (int i = 0; i < MAXPOP; i++) {
 			population[i].alleles = new int[4];
 			population[i].fitness = 0;
@@ -55,11 +55,11 @@ public class CDiophantine : MonoBehaviour	{
 	}
 	
 	
-	public gene GetGene(int i) { 
+	public cgene GetGene(int i) { 
 		return population[i];
 	}
 	
-	int Fitness(gene gn) {			
+	int Fitness(cgene gn) {			
 		int total = ca * gn.alleles[0] + cb * gn.alleles[1] + cc * gn.alleles[2] + cd * gn.alleles[3];			
 		return Mathf.Abs(total - result);
 		
@@ -101,7 +101,7 @@ public class CDiophantine : MonoBehaviour	{
 	}
 	
 	void CreateNewPopulation() {			
-		gene[] temppop= new gene[MAXPOP];		
+		cgene[] temppop= new cgene[MAXPOP];		
 		
 		for(int i=0;i<MAXPOP;i++) {				
 			int parent1 = 0, parent2 = 0, iterations = 0;				
@@ -149,14 +149,14 @@ public class CDiophantine : MonoBehaviour	{
 		
 	}
 	
-	gene Breed(int p1, int p2) {		
+	cgene Breed(int p1, int p2) {		
 		int crossover = rand.Next(5);			
 		int first = rand.Next(100);				
-		gene child = population[p1];			
+		cgene child = population[p1];			
 		int initial = 0, final = 4;	
 		
 		for(int i = initial; i < final; i++) {	
-			if (i <= crossover)	{
+			if (i < crossover)	{
 				child.alleles[i] = population[p1].alleles[i];
 			}		
 			else {
